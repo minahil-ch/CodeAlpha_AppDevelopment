@@ -156,11 +156,12 @@ class _QuoteGeneratorScreenState extends State<QuoteGeneratorScreen>
 
   void _shareQuote() {
     if (_currentQuote != null) {
-      // In a real app, you would use a package like 'share_plus' to implement sharing
+      String shareText = '"${_currentQuote!.text}"\n\n- ${_currentQuote!.author}';
+      // For now, showing a snackbar with the quote text
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Quote copied: "${_currentQuote!.text}"'),
-          duration: const Duration(seconds: 2),
+          content: Text('Quote copied: $shareText'),
+          duration: const Duration(seconds: 3),
         ),
       );
     }
@@ -254,8 +255,7 @@ class _QuoteGeneratorScreenState extends State<QuoteGeneratorScreen>
                 ),
               ),
               const SizedBox(height: 32),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              Column(
                 children: [
                   ElevatedButton.icon(
                     onPressed: _getRandomQuote,
@@ -268,6 +268,7 @@ class _QuoteGeneratorScreenState extends State<QuoteGeneratorScreen>
                       ),
                     ),
                   ),
+                  const SizedBox(height: 16),
                   IconButton(
                     onPressed: _shareQuote,
                     icon: const Icon(Icons.share),

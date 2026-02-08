@@ -1,0 +1,19 @@
+This is a placeholder file for the app icon. 
+
+To create a beautiful app icon for the Random Quote Generator:
+
+1. Create a square image (recommended 1024x1024 pixels) with a design representing quotes/inspiration
+2. Good design ideas:
+   - A stylized speech bubble or quotation marks
+   - An open book with a quote appearing from it
+   - A lightbulb with quotation marks inside (representing ideas)
+   - A pen writing a quote
+   - Abstract geometric shapes forming a quote symbol
+
+3. Save the image as app_icon.png in this directory (assets/icons/)
+
+4. Run the following command to generate the proper app icons:
+   flutter pub get
+   dart run flutter_launcher_icons
+
+This will generate properly sized icons for Android, iOS, and other platforms based on your source image.

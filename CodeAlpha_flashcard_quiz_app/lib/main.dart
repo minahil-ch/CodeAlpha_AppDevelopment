@@ -173,8 +173,10 @@ class _FlashcardQuizScreenState extends State<FlashcardQuizScreen> {
             const SizedBox(height: 24),
             
             // Action Buttons
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            Wrap(
+              spacing: 12,
+              runSpacing: 12,
+              alignment: WrapAlignment.center,
               children: [
                 ElevatedButton.icon(
                   onPressed: flashcards.isNotEmpty && currentIndex > 0 ? _previousCard : null,
@@ -223,8 +225,10 @@ class _FlashcardQuizScreenState extends State<FlashcardQuizScreen> {
             const SizedBox(height: 16),
             
             // Management Buttons
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            Wrap(
+              spacing: 12,
+              runSpacing: 12,
+              alignment: WrapAlignment.center,
               children: [
                 ElevatedButton.icon(
                   onPressed: () {
